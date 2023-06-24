@@ -1,0 +1,119 @@
+.testimonials {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+.left-t{
+    display: flex;
+    flex: 1 1;
+    gap: 2rem;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: white;
+}
+.left-t>:nth-child(1) {
+    color: var(--orange);
+    font-weight: bold;
+}
+.left-t>:nth-child(2),.left-t>:nth-child(3) {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+
+.left-t>:nth-child(4) {
+    text-transform: none;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+.right-t{
+    flex: 1 ;
+    position: relative;
+}
+.right-t>img{
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+    object-fit: cover;
+    right: 8rem;
+    top: 2rem;
+}
+.firstone {
+    position: absolute;
+    width: 17rem;
+    height: 20rem;
+  
+    border: 2px solid var(--orange);
+    background: transparent;
+    right: 9rem;
+    top: 0.9rem;
+}
+.seconddiv {
+    position: absolute;
+    width: 17rem;
+    height: 19rem;
+    z-index: -1;
+    background: var(--planCard);
+    right: 7rem;
+    top: 4rem;
+}
+.arrows{
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 8rem;
+}
+.arrows>img{
+    width: 1.5rem;
+    cursor: pointer;
+}
+@media screen and (max-width:974px) { 
+    .testimonials{
+        flex-direction: column;
+    }
+    .left-t>:nth-child(2),
+    .left-t>:nth-child(3) {
+        font-size: xx-large;
+    }
+    .right-t {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .right-t>div{
+        position: relative;
+        display: none;
+    }
+    .right-t>img{
+        top: 0;
+        right: 0;
+        position:relative;
+        align-self: center;
+    }
+    .right-t>:last-child{
+        display: block;
+        bottom: 0;
+        left: 0;
+    }
+    .right-t>:last-child>:nth-child(1) {
+      margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 974px) and (max-width: 1326px) {
+
+    .right-t>:last-child{ 
+        bottom: 0;
+        left:  10%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .testimonials .left-t span:nth-of-type(4) {
+        max-width: 45rem;
+    }
+}
